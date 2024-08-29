@@ -46,7 +46,7 @@ console.log(me.favThreeFoods[me.favThreeFoods.length - 1]);
 
 console.log(me.shoeCount);
 
-me.shoeCount = me.shoeCount + 1;
+Object.defineProperty(me, "shoeCount", {value : 7});
 console.log(me.shoeCount);
 
 /* 5. Add a new property to an existing object.
@@ -55,3 +55,7 @@ console.log(me.shoeCount);
   - Cool huh? It works, even though it wasn't there before
   - Console.log your object
 */
+
+Object.defineProperty(me, "favoriteColor", {value:"Green"});
+console.log(me.favoriteColor);
+
